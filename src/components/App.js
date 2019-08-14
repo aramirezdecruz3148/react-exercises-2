@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ColorPicker from './ColorPicker';
 import Incrementor from './Incrementor';
 import ColorDisplay from './ColorDisplay';
+import RandomColor from './RandomColor';
 
 export default class App extends Component {
   state = {
@@ -19,6 +20,7 @@ export default class App extends Component {
       <ColorPicker colors={['Red', 'Yellow', 'Green', 'Blue']} colorHandler={this.colorHandler}/>
       <ColorDisplay color={this.state.divColor}/>
       <Incrementor />
+      <RandomColor />
     </>
     );
   }
