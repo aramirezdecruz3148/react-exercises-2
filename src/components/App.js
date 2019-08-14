@@ -4,7 +4,7 @@ import ColorPicker from './ColorPicker';
 export default function App() {
   return (
     <>
-      <ColorPicker />
+      <ColorPicker colors={['Red', 'Yellow', 'Green', 'Blue']}/>
     </>
   );
 }

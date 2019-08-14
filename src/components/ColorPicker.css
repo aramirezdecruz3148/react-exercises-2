@@ -1,5 +1,4 @@
-.Red {
-  background: red;
+.Button {
   color: white;
   width: 75px;
   height: 50px;
@@ -7,20 +6,9 @@
   font-size: 1.5em;
 }
 
-.Yellow {
-  background: yellow;
-  color: white;
-  width: 75px;
-  height: 50px;
-  margin-right: 5px;
-  font-size: 1.3em;
-}
-
-.Blue {
-  background: blue;
-  color: white;
-  width: 75px;
-  height: 50px;
-  margin-right: 5px;
-  font-size: 1.5em;
+.Circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin-top: 10px;
 }
