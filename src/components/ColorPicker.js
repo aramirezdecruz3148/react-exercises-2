@@ -3,24 +3,20 @@ import PropTypes from 'prop-types';
 import styles from './ColorPicker.css';
 
 export default class ColorPicker extends Component {
-  state = {
-    divColor: ''
-  }
-
   static propTypes = {
+    colorHandler: PropTypes.func.isRequired,
     colors: PropTypes.arrayOf(PropTypes.string).isRequired
   }
 
-  colorHandler = color => {
-    console.log(color);
-    this.setState({ divColor: color });
-  }
   render() {
-    const { colors } = this.props;
+    const { 
+      colors,
+      colorHandler
+    } = this.props;
 
     const colorElements = colors.map(color => {
       return (
-        <button className={styles.Button} key={color} style={{ backgroundColor: color }} onClick={() => this.colorHandler(color)}>
+        <button className={styles.Button} key={color} style={{ backgroundColor: color }} onClick={() => colorHandler(color)}>
           {color}
         </button>
       );
@@ -28,7 +24,6 @@ export default class ColorPicker extends Component {
     return (
       <>
         {colorElements}
-        <div className={styles.Circle} style={{ background: this.state.divColor }}></div>
     </>
     );
   }
